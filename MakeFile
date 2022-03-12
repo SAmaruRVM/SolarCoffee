@@ -1,0 +1,10 @@
+# Project Variables
+PROJECT_NAME ?= SolarCoffee
+ORG_NAME ?= SolarCoffee
+REPO_NAME ?= SolarCoffee
+
+.PHONY: database
+
+database: 
+    dotnet ef database update -s SolarCoffe.BackEnd/Source/SolarCoffee.BackEnd.WebApi -p SolarCoffe.BackEnd/Source/SolarCoffee.BackEnd.Infrastructure
+
